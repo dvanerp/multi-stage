@@ -1,0 +1,13 @@
+version: '3'
+services:
+    multi-stage.one:
+        build:
+            context: .
+            target: one
+        container_name: one
+
+    multi-stage.two:
+        build:
+            context: .
+            target: two
+        container_name: two
