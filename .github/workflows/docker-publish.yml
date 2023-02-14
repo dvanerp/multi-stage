@@ -59,7 +59,7 @@ jobs:
           context: .
           target: one
           build-args: |
-            var_APP_CUSTOM_GITHUB_VAR=${{ env.APP_CUSTOM_GITHUB_VAR }}
+            var_APP_CUSTOM_GITHUB_VAR=${{ vars.APP_CUSTOM_GITHUB_VAR }}
           push: ${{ github.event_name != 'pull_request' }}
           tags: ghcr.io/dvanerp/multi-stage-one:${{ steps.meta.outputs.version }},ghcr.io/dvanerp/multi-stage-one:latest
           labels: ${{ steps.meta.outputs.labels }}
