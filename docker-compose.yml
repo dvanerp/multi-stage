@@ -5,6 +5,8 @@ services:
             context: .
             target: one
         container_name: one
+#        environment:
+#            APP_DEBUG: "false"
 
     multi-stage.two:
         build:
