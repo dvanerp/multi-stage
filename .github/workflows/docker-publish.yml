@@ -60,6 +60,9 @@ jobs:
           target: one
           build-args: |
             var_APP_CUSTOM_GITHUB_VAR=${{ vars.APP_CUSTOM_GITHUB_VAR }}
+          secrets: |
+            APP_CUSTOM_GITHUB_SECRET=${{ secrets.APP_CUSTOM_GITHUB_SECRET }}
+            SEC_2=${{ secrets.SEC_2 }}
           push: ${{ github.event_name != 'pull_request' }}
           tags: ghcr.io/dvanerp/multi-stage-one:${{ steps.meta.outputs.version }},ghcr.io/dvanerp/multi-stage-one:latest
           labels: ${{ steps.meta.outputs.labels }}
